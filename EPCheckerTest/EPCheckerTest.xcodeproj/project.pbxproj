@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2D32863184C5EF100DCB24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32862184C5EF100DCB24C /* Foundation.framework */; };
+		D2D32865184C5EF100DCB24C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32864184C5EF100DCB24C /* CoreGraphics.framework */; };
+		D2D32867184C5EF100DCB24C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32866184C5EF100DCB24C /* UIKit.framework */; };
+		D2D3286D184C5EF100DCB24C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2D3286B184C5EF100DCB24C /* InfoPlist.strings */; };
+		D2D3286F184C5EF100DCB24C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D3286E184C5EF100DCB24C /* main.m */; };
+		D2D32873184C5EF100DCB24C /* EPCTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D32872184C5EF100DCB24C /* EPCTAppDelegate.m */; };
+		D2D32875184C5EF100DCB24C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D32874184C5EF100DCB24C /* Images.xcassets */; };
+		D2D3287C184C5EF100DCB24C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D3287B184C5EF100DCB24C /* XCTest.framework */; };
+		D2D3287D184C5EF100DCB24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32862184C5EF100DCB24C /* Foundation.framework */; };
+		D2D3287E184C5EF100DCB24C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32866184C5EF100DCB24C /* UIKit.framework */; };
+		D2D32886184C5EF100DCB24C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2D32884184C5EF100DCB24C /* InfoPlist.strings */; };
+		D2D32888184C5EF100DCB24C /* EPCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D32887184C5EF100DCB24C /* EPCheckerTests.m */; };
+		D2D32893184C5F0E00DCB24C /* EPCTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D32892184C5F0E00DCB24C /* EPCTMainViewController.m */; };
+		D2D32898184C7CEC00DCB24C /* EPChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D32897184C7CEC00DCB24C /* EPChecker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2D3287F184C5EF100DCB24C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2D32857184C5EF100DCB24C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2D3285E184C5EF100DCB24C;
+			remoteInfo = EPCheckerTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2D3285F184C5EF100DCB24C /* EPCheckerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPCheckerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D32862184C5EF100DCB24C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2D32864184C5EF100DCB24C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2D32866184C5EF100DCB24C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2D3286A184C5EF100DCB24C /* EPCheckerTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPCheckerTest-Info.plist"; sourceTree = "<group>"; };
+		D2D3286C184C5EF100DCB24C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2D3286E184C5EF100DCB24C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2D32870184C5EF100DCB24C /* EPCheckerTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPCheckerTest-Prefix.pch"; sourceTree = "<group>"; };
+		D2D32871184C5EF100DCB24C /* EPCTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPCTAppDelegate.h; sourceTree = "<group>"; };
+		D2D32872184C5EF100DCB24C /* EPCTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPCTAppDelegate.m; sourceTree = "<group>"; };
+		D2D32874184C5EF100DCB24C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D2D3287A184C5EF100DCB24C /* EPCheckerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPCheckerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2D3287B184C5EF100DCB24C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D2D32883184C5EF100DCB24C /* EPCheckerTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPCheckerTestTests-Info.plist"; sourceTree = "<group>"; };
+		D2D32885184C5EF100DCB24C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2D32887184C5EF100DCB24C /* EPCheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPCheckerTests.m; sourceTree = "<group>"; };
+		D2D32891184C5F0E00DCB24C /* EPCTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPCTMainViewController.h; sourceTree = "<group>"; };
+		D2D32892184C5F0E00DCB24C /* EPCTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPCTMainViewController.m; sourceTree = "<group>"; };
+		D2D32896184C7CEC00DCB24C /* EPChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EPChecker.h; path = ../EPChecker/EPChecker.h; sourceTree = "<group>"; };
+		D2D32897184C7CEC00DCB24C /* EPChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EPChecker.m; path = ../EPChecker/EPChecker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2D3285C184C5EF100DCB24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D32865184C5EF100DCB24C /* CoreGraphics.framework in Frameworks */,
+				D2D32867184C5EF100DCB24C /* UIKit.framework in Frameworks */,
+				D2D32863184C5EF100DCB24C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D32877184C5EF100DCB24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D3287C184C5EF100DCB24C /* XCTest.framework in Frameworks */,
+				D2D3287E184C5EF100DCB24C /* UIKit.framework in Frameworks */,
+				D2D3287D184C5EF100DCB24C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2D32856184C5EF100DCB24C = {
+			isa = PBXGroup;
+			children = (
+				D2D32895184C7CB500DCB24C /* EPChecker */,
+				D2D32868184C5EF100DCB24C /* EPCheckerTest */,
+				D2D32881184C5EF100DCB24C /* EPCheckerTestTests */,
+				D2D32861184C5EF100DCB24C /* Frameworks */,
+				D2D32860184C5EF100DCB24C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2D32860184C5EF100DCB24C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3285F184C5EF100DCB24C /* EPCheckerTest.app */,
+				D2D3287A184C5EF100DCB24C /* EPCheckerTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2D32861184C5EF100DCB24C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2D32862184C5EF100DCB24C /* Foundation.framework */,
+				D2D32864184C5EF100DCB24C /* CoreGraphics.framework */,
+				D2D32866184C5EF100DCB24C /* UIKit.framework */,
+				D2D3287B184C5EF100DCB24C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2D32868184C5EF100DCB24C /* EPCheckerTest */ = {
+			isa = PBXGroup;
+			children = (
+				D2D32871184C5EF100DCB24C /* EPCTAppDelegate.h */,
+				D2D32872184C5EF100DCB24C /* EPCTAppDelegate.m */,
+				D2D32891184C5F0E00DCB24C /* EPCTMainViewController.h */,
+				D2D32892184C5F0E00DCB24C /* EPCTMainViewController.m */,
+				D2D32874184C5EF100DCB24C /* Images.xcassets */,
+				D2D32869184C5EF100DCB24C /* Supporting Files */,
+			);
+			path = EPCheckerTest;
+			sourceTree = "<group>";
+		};
+		D2D32869184C5EF100DCB24C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2D3286A184C5EF100DCB24C /* EPCheckerTest-Info.plist */,
+				D2D3286B184C5EF100DCB24C /* InfoPlist.strings */,
+				D2D3286E184C5EF100DCB24C /* main.m */,
+				D2D32870184C5EF100DCB24C /* EPCheckerTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D32881184C5EF100DCB24C /* EPCheckerTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2D32887184C5EF100DCB24C /* EPCheckerTests.m */,
+				D2D32882184C5EF100DCB24C /* Supporting Files */,
+			);
+			path = EPCheckerTestTests;
+			sourceTree = "<group>";
+		};
+		D2D32882184C5EF100DCB24C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2D32883184C5EF100DCB24C /* EPCheckerTestTests-Info.plist */,
+				D2D32884184C5EF100DCB24C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2D32895184C7CB500DCB24C /* EPChecker */ = {
+			isa = PBXGroup;
+			children = (
+				D2D32896184C7CEC00DCB24C /* EPChecker.h */,
+				D2D32897184C7CEC00DCB24C /* EPChecker.m */,
+			);
+			name = EPChecker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2D3285E184C5EF100DCB24C /* EPCheckerTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D3288B184C5EF100DCB24C /* Build configuration list for PBXNativeTarget "EPCheckerTest" */;
+			buildPhases = (
+				D2D3285B184C5EF100DCB24C /* Sources */,
+				D2D3285C184C5EF100DCB24C /* Frameworks */,
+				D2D3285D184C5EF100DCB24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EPCheckerTest;
+			productName = EPCheckerTest;
+			productReference = D2D3285F184C5EF100DCB24C /* EPCheckerTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2D32879184C5EF100DCB24C /* EPCheckerTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2D3288E184C5EF100DCB24C /* Build configuration list for PBXNativeTarget "EPCheckerTestTests" */;
+			buildPhases = (
+				D2D32876184C5EF100DCB24C /* Sources */,
+				D2D32877184C5EF100DCB24C /* Frameworks */,
+				D2D32878184C5EF100DCB24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2D32880184C5EF100DCB24C /* PBXTargetDependency */,
+			);
+			name = EPCheckerTestTests;
+			productName = EPCheckerTestTests;
+			productReference = D2D3287A184C5EF100DCB24C /* EPCheckerTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2D32857184C5EF100DCB24C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EPCT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Extensivepro;
+				TargetAttributes = {
+					D2D32879184C5EF100DCB24C = {
+						TestTargetID = D2D3285E184C5EF100DCB24C;
+					};
+				};
+			};
+			buildConfigurationList = D2D3285A184C5EF100DCB24C /* Build configuration list for PBXProject "EPCheckerTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2D32856184C5EF100DCB24C;
+			productRefGroup = D2D32860184C5EF100DCB24C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2D3285E184C5EF100DCB24C /* EPCheckerTest */,
+				D2D32879184C5EF100DCB24C /* EPCheckerTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2D3285D184C5EF100DCB24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D3286D184C5EF100DCB24C /* InfoPlist.strings in Resources */,
+				D2D32875184C5EF100DCB24C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D32878184C5EF100DCB24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D32886184C5EF100DCB24C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2D3285B184C5EF100DCB24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D32898184C7CEC00DCB24C /* EPChecker.m in Sources */,
+				D2D32893184C5F0E00DCB24C /* EPCTMainViewController.m in Sources */,
+				D2D32873184C5EF100DCB24C /* EPCTAppDelegate.m in Sources */,
+				D2D3286F184C5EF100DCB24C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2D32876184C5EF100DCB24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D32888184C5EF100DCB24C /* EPCheckerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2D32880184C5EF100DCB24C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2D3285E184C5EF100DCB24C /* EPCheckerTest */;
+			targetProxy = D2D3287F184C5EF100DCB24C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2D3286B184C5EF100DCB24C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D3286C184C5EF100DCB24C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D2D32884184C5EF100DCB24C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2D32885184C5EF100DCB24C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2D32889184C5EF100DCB24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2D3288A184C5EF100DCB24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2D3288C184C5EF100DCB24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPCheckerTest/EPCheckerTest-Prefix.pch";
+				INFOPLIST_FILE = "EPCheckerTest/EPCheckerTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2D3288D184C5EF100DCB24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPCheckerTest/EPCheckerTest-Prefix.pch";
+				INFOPLIST_FILE = "EPCheckerTest/EPCheckerTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D2D3288F184C5EF100DCB24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EPCheckerTest.app/EPCheckerTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPCheckerTest/EPCheckerTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EPCheckerTestTests/EPCheckerTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D2D32890184C5EF100DCB24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EPCheckerTest.app/EPCheckerTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EPCheckerTest/EPCheckerTest-Prefix.pch";
+				INFOPLIST_FILE = "EPCheckerTestTests/EPCheckerTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2D3285A184C5EF100DCB24C /* Build configuration list for PBXProject "EPCheckerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D32889184C5EF100DCB24C /* Debug */,
+				D2D3288A184C5EF100DCB24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D3288B184C5EF100DCB24C /* Build configuration list for PBXNativeTarget "EPCheckerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D3288C184C5EF100DCB24C /* Debug */,
+				D2D3288D184C5EF100DCB24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2D3288E184C5EF100DCB24C /* Build configuration list for PBXNativeTarget "EPCheckerTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2D3288F184C5EF100DCB24C /* Debug */,
+				D2D32890184C5EF100DCB24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2D32857184C5EF100DCB24C /* Project object */;
+}
