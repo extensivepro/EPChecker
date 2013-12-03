@@ -8,6 +8,18 @@
 
 #import "EPChecker.h"
 
+NSString * const EPCheckerErrorDomain = @"EPCheckerErrorDomain";
+
+typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
+    EPIDCardValidateResultPass = 0,
+    EPIDCardValidateResultNilValue,
+    EPIDCardValidateResultWrongLength,
+    EPIDCardValidateResultWrongProvince,
+    EPIDCardValidateResultWrongBirthDate,
+    EPIDCardValidateResultWrongChecksum,
+    EPIDCardValidateResultError,
+};
+
 @implementation EPChecker
 
 //http://blog.csdn.net/afyzgh/article/details/16965107
@@ -105,6 +117,56 @@
             }
         default:
             return EPIDCardValidateResultError;
+    }
+}
+
++ (BOOL)isValidIDCard:(NSString *)IDCard error:(NSError * __autoreleasing *)error
+{
+    EPIDCardValidateResult result = [self validateIDCardNumber:IDCard];
+    switch (result) {
+        case EPIDCardValidateResultPass:
+            if (error) {
+                *error = nil;
+            }
+            return YES;
+            break;
+        case EPIDCardValidateResultNilValue:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerIDCardNilValueError userInfo:nil];
+            }
+            return NO;
+            break;
+        case EPIDCardValidateResultWrongBirthDate:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerIDCardWrongBirthDateError userInfo:nil];
+            }
+            return NO;
+            break;
+        case EPIDCardValidateResultWrongChecksum:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerIDCardWrongChecksumError userInfo:nil];
+            }
+            return NO;
+            break;
+        case EPIDCardValidateResultWrongLength:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerIDCardWrongLengthError userInfo:nil];
+            }
+            return NO;
+            break;
+        case EPIDCardValidateResultWrongProvince:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerIDCardWrongProvinceError userInfo:nil];
+            }
+            return NO;
+            break;
+        case EPIDCardValidateResultError:
+        default:
+            if (error) {
+                *error = [NSError errorWithDomain:EPCheckerErrorDomain code:EPCheckerErrorUnknown userInfo:nil];
+            }
+            return NO;
+            break;
     }
 }
 

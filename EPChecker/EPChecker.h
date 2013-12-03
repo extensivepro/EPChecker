@@ -8,27 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
-    EPIDCardValidateResultPass = 0,
-    EPIDCardValidateResultNilValue,
-    EPIDCardValidateResultWrongLength,
-    EPIDCardValidateResultWrongProvince,
-    EPIDCardValidateResultWrongBirthDate,
-    EPIDCardValidateResultWrongChecksum,
-    EPIDCardValidateResultError,
+extern NSString * const EPCheckerErrorDomain;
+
+typedef NS_ENUM(NSUInteger, EPCheckerError) {
+    EPCheckerIDCardNilValueError = 100,
+    EPCheckerIDCardWrongLengthError = 101,
+    EPCheckerIDCardWrongProvinceError = 102,
+    EPCheckerIDCardWrongBirthDateError = 103,
+    EPCheckerIDCardWrongChecksumError = 104,
+    EPCheckerErrorUnknown = -1,
 };
 
 @interface EPChecker : NSObject
 
 /**
- *  validate the IDCard String
+ *  validate the IDCard, you can just pass nil to error if you don't care error
  *
- *  @param IDCardValue the IDCard string to check
+ *  @param IDCard the IDCard string to check
+ *  @param error  the error which contains why the IDCard is invalid
  *
- *  @return a value of EPIDCardValidateResult
- *  @see EPIDCardValidateResult
+ *  @return YES if the IDCard is a valid IDCard; Otherwise NO.
  */
-+ (EPIDCardValidateResult)validateIDCardNumber:(NSString *)IDCardValue;
++ (BOOL)isValidIDCard:(NSString *)IDCard error:(NSError * __autoreleasing *)error;
 
 /**
  *  validate the emailValue

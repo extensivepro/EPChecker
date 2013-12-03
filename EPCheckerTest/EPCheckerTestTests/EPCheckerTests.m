@@ -28,15 +28,35 @@
 - (void)testValidateIDCard
 {
     //valid ID:652100198806111135,34052419800101001X
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"652100198806111135"] == EPIDCardValidateResultPass, @"valid identifier(652100198806111135) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"34052419800101001X"] == EPIDCardValidateResultPass, @"valid identifier(34052419800101001X) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"34052419800101001x"] == EPIDCardValidateResultPass, @"valid identifier(34052419800101001x) check failed!");
+    NSError *error;
+    XCTAssertTrue([EPChecker isValidIDCard:@"652100198806111135" error:&error]);
+    XCTAssertNil(error);
+    
+    XCTAssertTrue([EPChecker isValidIDCard:@"34052419800101001X" error:&error]);
+    XCTAssertNil(error);
+    
+    XCTAssertTrue([EPChecker isValidIDCard:@"34052419800101001x" error:nil]);
     //invalid
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"652100198806111134"] == EPIDCardValidateResultWrongChecksum, @"valid identifier(652100198806111134) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"340524198001010011"] == EPIDCardValidateResultWrongChecksum, @"valid identifier(340524198001010011) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:@"000000000000000000"] == EPIDCardValidateResultWrongProvince, @"valid identifier(000000000000000000) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:nil] == EPIDCardValidateResultNilValue, @"valid identifier(nil) check failed!");
-    XCTAssertTrue([EPChecker validateIDCardNumber:@""] == EPIDCardValidateResultWrongLength, @"valid identifier(\"\") check failed!");
+    XCTAssertFalse([EPChecker isValidIDCard:@"652100198806111134" error:&error]);
+    XCTAssertNotNil(error);
+    XCTAssertEqual((EPCheckerError)error.code, EPCheckerIDCardWrongChecksumError);
+    
+    XCTAssertFalse([EPChecker isValidIDCard:@"340524200102290011" error:&error]);
+    XCTAssertNotNil(error);
+    XCTAssertEqual((EPCheckerError)error.code, EPCheckerIDCardWrongBirthDateError);
+    
+    XCTAssertFalse([EPChecker isValidIDCard:@"000000000000000000" error:&error]);
+    XCTAssertNotNil(error);
+    XCTAssertEqual((EPCheckerError)error.code, EPCheckerIDCardWrongProvinceError);
+    
+    XCTAssertFalse([EPChecker isValidIDCard:nil error:&error]);
+    XCTAssertNotNil(error);
+    XCTAssertEqual((EPCheckerError)error.code, EPCheckerIDCardNilValueError);
+    
+    XCTAssertFalse([EPChecker isValidIDCard:@"" error:&error]);
+    XCTAssertNotNil(error);
+    XCTAssertEqual((EPCheckerError)error.code, EPCheckerIDCardWrongLengthError);
+    
 }
 
 - (void) testMobileNumber {
