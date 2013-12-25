@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
     value = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     value = [value uppercaseString];
     
-    int length = 0;
+    NSUInteger length = 0;
     if (!value) {
         return EPIDCardValidateResultNilValue;
     }else {
