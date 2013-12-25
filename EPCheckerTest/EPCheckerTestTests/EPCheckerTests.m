@@ -68,6 +68,24 @@
     XCTAssertFalse([EPChecker isValidMobileNumber:@""], @"valid phone(\"\") check failed!");
 }
 
+- (void) testTelePhone {
+    XCTAssertTrue([EPChecker isValidTelePhoneNumber:@"02586651234"], @"valid telephone: 02586651234 failure");
+    
+    XCTAssertFalse([EPChecker isValidTelePhoneNumber:@"025123456"], @"valid telephone: 0251234567 failure");
+    XCTAssertFalse([EPChecker isValidTelePhoneNumber:nil], @"valid phone(nil) check failed!");
+    XCTAssertFalse([EPChecker isValidTelePhoneNumber:@""], @"valid phone(\"\") check failed!");
+}
+
+- (void) testPhone {
+    XCTAssertTrue([EPChecker isValidPhone:@"02586651234"], @"valid phone: 02586651234 failure");
+    XCTAssertTrue([EPChecker isValidPhone:@"13676058888"], @"valid phone: 13676058888 failure");
+
+    XCTAssertFalse([EPChecker isValidPhone:@"123"], @"valid phone(123) check failed!");
+    XCTAssertFalse([EPChecker isValidPhone:@"025123456"], @"valid telephone: 0251234567 failure");
+    XCTAssertFalse([EPChecker isValidPhone:nil], @"valid phone(nil) check failed!");
+    XCTAssertFalse([EPChecker isValidPhone:@""], @"valid phone(\"\") check failed!");
+}
+
 - (void) testEmail {
     //valid email:example@example.com
     XCTAssertTrue([EPChecker isValidEmail:@"example@example.com"], @"valid email(example@example.com) check failed!");

@@ -7,7 +7,7 @@ Extensivepro Checker Collection such as email, id card(mainland China) and phone
 
 ### With CocoaPods
 ```ruby
-pod 'EPChecker', '~> 1.0.0'
+pod 'EPChecker', '~> 2.1.0'
 ```
 
 ### Manual

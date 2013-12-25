@@ -49,4 +49,22 @@ typedef NS_ENUM(NSUInteger, EPCheckerError) {
  */
 + (BOOL)isValidMobileNumber:(NSString *)mobileNumberValue;
 
+/**
+ *  validate the telephone value
+ *
+ *  @param telephone number to check
+ *
+ *  @return YES if the telephone value is a valid telephone number in China; Otherwise NO.
+ */
++ (BOOL)isValidTelePhoneNumber:(NSString *)telephone;
+
+/**
+ *  validate the phone Value
+ *
+ *  @param phone number to check
+ *
+ *  @return YES if the phone value is a valid phone number in China; Otherwise NO.
+ */
++ (BOOL)isValidPhone:(NSString *)phone;
+
 @end

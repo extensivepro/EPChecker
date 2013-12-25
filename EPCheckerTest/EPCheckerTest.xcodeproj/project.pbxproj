@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1B3819186A999D0066DF19 /* EPChecker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B3818186A999D0066DF19 /* EPChecker.podspec */; };
+		1E1B381B186A99A60066DF19 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B381A186A99A60066DF19 /* README.md */; };
 		D2D32863184C5EF100DCB24C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32862184C5EF100DCB24C /* Foundation.framework */; };
 		D2D32865184C5EF100DCB24C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32864184C5EF100DCB24C /* CoreGraphics.framework */; };
 		D2D32867184C5EF100DCB24C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D32866184C5EF100DCB24C /* UIKit.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1B3818186A999D0066DF19 /* EPChecker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EPChecker.podspec; path = ../EPChecker.podspec; sourceTree = "<group>"; };
+		1E1B381A186A99A60066DF19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D2D3285F184C5EF100DCB24C /* EPCheckerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPCheckerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D32862184C5EF100DCB24C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2D32864184C5EF100DCB24C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +162,8 @@
 			children = (
 				D2D32896184C7CEC00DCB24C /* EPChecker.h */,
 				D2D32897184C7CEC00DCB24C /* EPChecker.m */,
+				1E1B3818186A999D0066DF19 /* EPChecker.podspec */,
+				1E1B381A186A99A60066DF19 /* README.md */,
 			);
 			name = EPChecker;
 			sourceTree = "<group>";
@@ -238,7 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1B3819186A999D0066DF19 /* EPChecker.podspec in Resources */,
 				D2D3286D184C5EF100DCB24C /* InfoPlist.strings in Resources */,
+				1E1B381B186A99A60066DF19 /* README.md in Resources */,
 				D2D32875184C5EF100DCB24C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

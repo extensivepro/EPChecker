@@ -204,12 +204,6 @@ typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
      * 133,1349,153,180,189
      */
     NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
-    /**
-     * 大陆地区固话及小灵通
-     * 区号：010,020,021,022,023,024,025,027,028,029
-     * 号码：七位或八位
-     */
-    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
     
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
@@ -227,6 +221,25 @@ typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
     {
         return NO;
     }
+}
+
++ (BOOL)isValidTelePhoneNumber:(NSString *)telephone
+{
+    /**
+     * 大陆地区固话及小灵通
+     * 区号：010,020,021,022,023,024,025,027,028,029
+     * 号码：七位或八位
+     */
+    NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+
+    NSPredicate *regextest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PHS];
+    
+    return [regextest evaluateWithObject:telephone];
+}
+
++ (BOOL)isValidPhone:(NSString *)phone
+{
+    return ([self isValidMobileNumber:phone] || [self isValidTelePhoneNumber:phone]);
 }
 
 @end
