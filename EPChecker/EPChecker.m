@@ -186,7 +186,7 @@ typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
      * 手机号码
      * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188,184
      * 联通：130,131,132,152,155,156,185,186
-     * 电信：133,1349,153,180,189
+     * 电信：133,1349,153,180,181,189
      */
     NSString * MOBILE = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
     /**
@@ -201,9 +201,9 @@ typedef NS_ENUM(NSUInteger, EPIDCardValidateResult) {
     NSString * CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
     /**
      * 中国电信：China Telecom
-     * 133,1349,153,180,189
+     * 133,1349,153,180,181,189
      */
-    NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
+    NSString * CT = @"^1((33|53|8[091])[0-9]|349)\\d{7}$";
     
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];

@@ -62,6 +62,7 @@
 - (void) testMobileNumber {
     //valid phone:13676058888
     XCTAssertTrue([EPChecker isValidMobileNumber:@"13676058888"], @"valid phone(13676058888) check failed!");
+    XCTAssertTrue([EPChecker isValidMobileNumber:@"18176058888"], @"valid phone(13676058888) check failed!");
     //invalid
     XCTAssertFalse([EPChecker isValidMobileNumber:@"123"], @"valid phone(123) check failed!");
     XCTAssertFalse([EPChecker isValidMobileNumber:nil], @"valid phone(nil) check failed!");
